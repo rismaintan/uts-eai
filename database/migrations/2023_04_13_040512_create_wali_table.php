@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('wali', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('pekerjaan');
             $table->bigInteger('student_id')->unsigned();
             // $table->foreign('student_id')->references('id')->on('students');
             $table->timestamps();

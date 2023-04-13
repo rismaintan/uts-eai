@@ -12,6 +12,7 @@ class Wali extends Model
 
     protected $fillable = [
         'nama',
+        'pekerjaan',
         'student_id'
     ];
 }

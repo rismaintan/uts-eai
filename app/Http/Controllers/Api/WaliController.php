@@ -27,6 +27,7 @@ class WaliController extends Controller
     public function store(Request $request){
         $validator = Validator::make($request->all(), [
             'nama'  => 'required|string:191',
+            'pekerjaa'  => 'required|string:191',
             'student_id' => 'required'
         ]);
         if($validator->fails()){
@@ -38,6 +39,7 @@ class WaliController extends Controller
         }else{
             $wali = Wali::create([
                 'nama'  => $request->nama,
+                'pekerjaan'     => $request->pekerjaan,
                 'student_id'  => $request->student_id,
             ]);
 
@@ -75,6 +77,7 @@ class WaliController extends Controller
     public function update(Request $request, int $id){
         $validator = Validator::make($request->all(), [
             'nama'  => 'required|string:191',
+            'pekerjaan' => 'required|string:191',
             'student_id' => 'required'
         ]);
         if($validator->fails()){
@@ -89,6 +92,7 @@ class WaliController extends Controller
             if($wali){
                 $wali->update([
                     'nama'  => $request->nama,
+                    'pekerjaan' => $request->pekerjaan,
                     'student_id'  => $request->student_id,
                 ]);
 

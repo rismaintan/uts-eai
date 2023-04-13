@@ -55,4 +55,21 @@ class WaliController extends Controller
             }
         }
     }
+
+    public function show($id){
+        $wali = Wali::find($id);
+        if($wali){
+            return response()->json([
+                'status'    => 200,
+                'wali'      => $wali
+            ], 200); 
+            
+        }else{
+            return response()->json([
+                'status'    => 404,
+                'message'   => "No Such Wali Found!"
+            ], 404); 
+        }
+    }
+
 }

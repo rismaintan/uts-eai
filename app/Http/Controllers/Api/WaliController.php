@@ -27,7 +27,7 @@ class WaliController extends Controller
     public function store(Request $request){
         $validator = Validator::make($request->all(), [
             'nama'  => 'required|string:191',
-            'pekerjaa'  => 'required|string:191',
+            'pekerjaan'  => 'required|string:191',
             'student_id' => 'required'
         ]);
         if($validator->fails()){

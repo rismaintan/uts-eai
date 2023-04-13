@@ -12,8 +12,11 @@ class Student extends Model
     protected $table = 'students';
 
     protected $fillable = [
+        'nim',
         'nama',
-        'student_id'
-
+        'email',
+        'phone'
     ];
 }
+
+

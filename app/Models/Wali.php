@@ -11,9 +11,7 @@ class Wali extends Model
     protected $table = 'wali';
 
     protected $fillable = [
-        'nim',
         'nama',
-        'eemail',
-        'phone'
+        'student_id'
     ];
 }

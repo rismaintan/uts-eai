@@ -20,4 +20,6 @@ Route::put('students/{id}/edit', [StudentController::class, 'update']);
 Route::delete('students/{id}/delete', [StudentController::class, 'destroy']); 
 
 Route::get('wali', [WaliController::class, 'index']); 
+Route::post('wali', [WaliController::class, 'store']); 
+
  

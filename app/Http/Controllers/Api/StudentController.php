@@ -26,8 +26,8 @@ class StudentController extends Controller
 
     public function store(Request $request){
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string:191',
-            'course' => 'required|string:191',
+            'nim'   => 'required',
+            'nama'  => 'required|string:191',
             'email' => 'required|email:191',
             'phone' => 'required|digits:10',
         ]);
@@ -39,8 +39,8 @@ class StudentController extends Controller
 
         }else{
             $students = Student::create([
-                'name'  => $request->name,
-                'course'  => $request->course,
+                'nim'  => $request->nim,
+                'nama'  => $request->nama,
                 'email'  => $request->email,
                 'phone'  => $request->phone,
             ]);
@@ -94,8 +94,8 @@ class StudentController extends Controller
 
     public function update(Request $request, int $id){
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string:191',
-            'course' => 'required|string:191',
+            'nim'   => 'required',
+            'nama'  => 'required|string:191',
             'email' => 'required|email:191',
             'phone' => 'required|digits:10',
         ]);
@@ -110,8 +110,8 @@ class StudentController extends Controller
            
             if($students){
                 $students->update([
-                    'name'  => $request->name,
-                    'course'  => $request->course,
+                    'nim'  => $request->nim,
+                    'nama'  => $request->nama,
                     'email'  => $request->email,
                     'phone'  => $request->phone,
                 ]);
